@@ -1,3 +1,12 @@
-<div class="container-fluid">
-  <input type="text" placeholder="Type English to be -> to PigLatin">
+<div class="container-fluid" id = "fullWindow">
+  <h1>English to Pig Latin Translator</h1>
+  
+  <div class="container-fluid" id ="holdInput">
+    <input id = "theInput" class = "form-control text-white" type="text" (keyup)="onKey($event)"
+           placeholder= "Type English to be -> to PigLatin" (value) = "bindedWord" />
+  </div>
+  
+  <div id="showResult" class="jumbotron">
+    {{bindedWord}}
+  </div>
 </div>
